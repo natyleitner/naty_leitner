@@ -156,8 +156,9 @@ const NavBar = () => {
                               aria-label={page.title}
                               title={page.title}
                               className={clsx(
-                                'block font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400',
-                                pageActive === pages[i] && 'text-gray-400'
+                                'block font-medium tracking-wide transition-colors duration-200 hover:text-deep-purple-accent-400',
+                                pageActive === pages[i] && 'text-gray-400',
+                                pageActive !== pages[i] && 'text-gray-700'
                               )}
                               onClick={() => setIsMenuOpen(false)}
                             >

@@ -5,9 +5,10 @@ export const siteTitle: string = 'Naty Leitner';
 
 const Layout = ({ children }: { children: React.ReactNode }) => (
   <div>
+    {/* TODO: how to have only 1 head? Probably in page file? */}
     <Head>
       <link rel="icon" href="/favicon.ico" />
-      <meta name="description" content="Naty Leitner personal website" />
+      <meta name="description" content="Naty Leitner's personal website" />
       <meta
         property="og:image"
         content={`https://og-image.vercel.app/${encodeURI(
