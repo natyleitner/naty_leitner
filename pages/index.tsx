@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
+import NavBar from '../components/navbar';
 
 export default function Home() {
   return (
@@ -12,11 +13,7 @@ export default function Home() {
       </Head>
 
       <main>
-        <nav>
-          <Link href="/about">
-            <a>About</a>
-          </Link>
-        </nav>
+        {/* <NavBar /> */}
         <h1 className="text-xl">
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
