@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Footer from './footer';
 import NavBar from './navbar';
 
 export const siteTitle: string = 'Naty Leitner';
@@ -22,7 +23,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => (
       <NavBar />
     </header>
     <main>{children}</main>
-    {/* <Footer> </Footer> */}
+    <Footer />
   </div>
 );
 
