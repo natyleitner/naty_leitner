@@ -2,6 +2,7 @@ import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import clsx from 'clsx';
+import Logo, { LogoColor } from './logo';
 
 type Page = {
   name: string;
@@ -37,24 +38,7 @@ const NavBar = () => {
               title="Naty Leitner"
               className="inline-flex items-center text-white"
             >
-              <svg
-                className="w-8 text-teal-accent-400"
-                viewBox="0 0 24 24"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeMiterlimit="10"
-                stroke="currentColor"
-                fill="none"
-              >
-                <rect x="3" y="1" width="7" height="12" />
-                <rect x="3" y="17" width="7" height="6" />
-                <rect x="14" y="1" width="7" height="6" />
-                <rect x="14" y="11" width="7" height="12" />
-              </svg>
-              <span className="ml-2 text-xl font-bold tracking-wide text-gray-100 uppercase">
-                Naty Leitner
-              </span>
+              <Logo logoColor={LogoColor.white} />
             </a>
           </Link>
           <ul className="flex items-center hidden space-x-8 lg:flex">
@@ -65,7 +49,7 @@ const NavBar = () => {
                     aria-label={page.title}
                     title={page.title}
                     className={clsx(
-                      'font-medium tracking-wide text-gray-100 p-2 transition-colors duration-200 hover:text-teal-accent-400',
+                      'font-medium tracking-wide text-gray-100 p-2 transition-colors duration-200 hover:text-gray-300',
                       pageActive === pages[i] && 'bg-gray-700'
                     )}
                     aria-current={pageActive === page ? 'page' : undefined}
@@ -110,24 +94,7 @@ const NavBar = () => {
                           className="inline-flex items-center"
                           onClick={() => setIsMenuOpen(false)}
                         >
-                          <svg
-                            className="w-8 text-deep-purple-accent-400"
-                            viewBox="0 0 24 24"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeMiterlimit="10"
-                            stroke="currentColor"
-                            fill="none"
-                          >
-                            <rect x="3" y="1" width="7" height="12" />
-                            <rect x="3" y="17" width="7" height="6" />
-                            <rect x="14" y="1" width="7" height="6" />
-                            <rect x="14" y="11" width="7" height="12" />
-                          </svg>
-                          <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-                            Naty Leitner
-                          </span>
+                          <Logo logoColor={LogoColor.black} />
                         </a>
                       </Link>
                     </div>
