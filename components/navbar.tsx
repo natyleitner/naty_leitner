@@ -49,7 +49,7 @@ const NavBar = () => {
                     aria-label={page.title}
                     title={page.title}
                     className={clsx(
-                      'font-medium tracking-wide text-gray-100 p-2 transition-colors duration-200 hover:text-teal-accent-400',
+                      'font-medium tracking-wide text-gray-100 p-2 transition-colors duration-200 hover:text-gray-300',
                       pageActive === pages[i] && 'bg-gray-700'
                     )}
                     aria-current={pageActive === page ? 'page' : undefined}
